@@ -1,7 +1,0 @@
-tablero Ventas {
-fuente ventas tipo csv ruta "datos/ventas.csv";
-metrica total = suma(importe);
-grafico BarrasMensuales {tipo = barras; usar = total;}
-filtro region == "Cuyo";
-alerta si total > 100000 entonces "Meta mensual superada";
-}
